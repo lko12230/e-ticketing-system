@@ -1,0 +1,2906 @@
+/* ============================================================
+   USER PROFILE PAGE
+============================================================ */
+
+.profile-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px 32px 45px;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   MAIN PROFILE CARD
+============================================================ */
+
+.linkedin-profile-card {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.04);
+
+  isolation: isolate;
+
+  overflow: visible;
+}
+
+
+/* ============================================================
+   BLUE COVER
+============================================================ */
+
+.linkedin-cover {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+
+  border-radius: 13px 13px 0 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a 0%,
+      #172554 35%,
+      #1e40af 65%,
+      #2563eb 100%
+    );
+}
+
+
+/* ============================================================
+   COVER DECORATION
+============================================================ */
+
+.linkedin-cover::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -300px;
+  right: 120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  pointer-events: none;
+}
+
+
+.linkedin-cover::after {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -70px;
+  bottom: -240px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   TOOL NAME
+============================================================ */
+
+.linkedin-cover-overlay {
+  position: absolute;
+
+  left: 36px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  pointer-events: none;
+}
+
+
+.linkedin-cover-title {
+  color: #ffffff;
+
+  font-size: 26px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+
+.linkedin-cover-subtitle {
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   COVER CAMERA
+============================================================ */
+
+.linkedin-cover-edit {
+  position: absolute;
+
+  top: 20px;
+  right: 22px;
+
+  z-index: 20;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  background: rgba(15, 23, 42, 0.35);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition: all 0.2s ease;
+}
+
+
+.linkedin-cover-edit:hover {
+  background: rgba(15, 23, 42, 0.65);
+
+  transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   PROFILE BODY
+
+   PHOTO + INFORMATION
+============================================================ */
+
+.linkedin-profile-body {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 22px;
+
+  min-height: 190px;
+
+  padding: 0 28px 25px;
+
+  background: #ffffff;
+
+  border-radius: 0 0 14px 14px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   PROFILE PHOTO WRAPPER
+
+   IMPORTANT:
+   Normal flex item hai.
+   Absolute positioning nahi hai.
+============================================================ */
+
+.linkedin-photo-wrapper {
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 140px;
+  height: 140px;
+
+  margin-top: -70px;
+
+  z-index: 100;
+}
+
+
+/* ============================================================
+   PROFILE PHOTO
+============================================================ */
+
+.linkedin-profile-photo {
+  position: relative;
+
+  z-index: 101;
+
+  width: 140px;
+  height: 140px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border: 6px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.22);
+}
+
+
+.linkedin-profile-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.linkedin-profile-photo span {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  color: #ffffff;
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* ============================================================
+   PHOTO CAMERA
+============================================================ */
+
+.linkedin-photo-camera {
+  position: absolute;
+
+  right: 1px;
+  bottom: 4px;
+
+  z-index: 110;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 3px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 9px rgba(15, 23, 42, 0.2);
+
+  transition: all 0.2s ease;
+}
+
+
+.linkedin-photo-camera:hover {
+  background: #1d4ed8;
+
+  transform: scale(1.05);
+}
+
+
+/* ============================================================
+   PROFILE MAIN INFORMATION
+============================================================ */
+
+.linkedin-profile-main {
+  flex: 1;
+
+  min-width: 0;
+
+  padding-top: 23px;
+
+  padding-left: 0;
+}
+
+
+/* ============================================================
+   NAME
+============================================================ */
+
+.linkedin-profile-name-row {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.linkedin-profile-name-row h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 28px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* ============================================================
+   VERIFIED BADGE
+============================================================ */
+
+.linkedin-verified-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  min-height: 25px;
+
+  padding: 0 9px;
+
+  border: 1px solid #bbf7d0;
+
+  border-radius: 20px;
+
+  background: #ecfdf5;
+
+  color: #15803d;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   DESIGNATION
+============================================================ */
+
+.linkedin-designation {
+  margin: 7px 0 0;
+
+  color: #475569;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   PROFILE META
+============================================================ */
+
+.linkedin-profile-meta {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 13px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+.linkedin-profile-meta span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  white-space: nowrap;
+}
+
+
+.linkedin-profile-meta svg {
+  flex-shrink: 0;
+
+  color: #64748b;
+}
+
+
+.linkedin-profile-meta strong {
+  color: #334155;
+
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   IDENTITY STATUS
+============================================================ */
+
+.linkedin-profile-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 14px;
+
+  padding: 6px 10px;
+
+  border-radius: 7px;
+
+  background: #f0fdf4;
+
+  color: #15803d;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+.linkedin-profile-status svg {
+  color: #16a34a;
+}
+
+
+/* ============================================================
+   EDIT PROFILE
+============================================================ */
+
+.linkedin-profile-actions {
+  position: relative;
+
+  z-index: 110;
+
+  flex-shrink: 0;
+
+  padding-top: 27px;
+}
+
+
+.linkedin-edit-profile-btn {
+  height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.linkedin-edit-profile-btn:hover {
+  background: #f8fafc;
+
+  border-color: #94a3b8;
+
+  color: #1e293b;
+}
+
+
+/* ============================================================
+   DETAILS BAR
+============================================================ */
+
+.linkedin-profile-details {
+  position: relative;
+
+  z-index: 15;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid #e2e8f0;
+
+  background: #f8fafc;
+}
+
+
+.linkedin-detail-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  padding: 16px 20px;
+
+  border-right: 1px solid #e2e8f0;
+}
+
+
+.linkedin-detail-item:last-child {
+  border-right: none;
+}
+
+
+.linkedin-detail-item > svg {
+  flex-shrink: 0;
+
+  color: #64748b;
+}
+
+
+.linkedin-detail-item div {
+  min-width: 0;
+}
+
+
+.linkedin-detail-item span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+
+.linkedin-detail-item strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #334155;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   IDENTITY VERIFICATION
+============================================================ */
+
+.linkedin-identity-section {
+  position: relative;
+
+  z-index: 20;
+
+  border-top: 1px solid #e2e8f0;
+
+  background: #ffffff;
+}
+
+
+.linkedin-qr-section {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 24px;
+
+  background: #ffffff;
+}
+
+
+.linkedin-qr-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+}
+
+
+.linkedin-qr-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #ecfdf5;
+
+  color: #16a34a;
+}
+
+
+.linkedin-qr-info > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 0;
+}
+
+
+.linkedin-qr-info strong {
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.linkedin-qr-info span {
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+.linkedin-qr-action {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+.linkedin-qr-box {
+  width: 86px;
+  height: 86px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+
+.linkedin-qr-box svg {
+  display: block;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.linkedin-view-qr-button {
+  min-height: 36px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 13px;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 7px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.linkedin-view-qr-button:hover {
+  background: #dbeafe;
+
+  border-color: #93c5fd;
+}
+
+
+/* ============================================================
+   QR MODAL
+============================================================ */
+
+.qr-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.58);
+
+  backdrop-filter: blur(4px);
+}
+
+
+.qr-modal {
+  width: 100%;
+
+  max-width: 430px;
+
+  max-height: calc(100vh - 40px);
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  padding: 22px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 70px rgba(15, 23, 42, 0.25);
+}
+
+
+.qr-modal-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+
+.qr-modal-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+.qr-modal-header p {
+  margin: 5px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+.qr-close-button {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+
+.qr-close-button:hover {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+.qr-large-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px 0;
+}
+
+
+.qr-large-container svg {
+  width: 230px;
+
+  max-width: 100%;
+
+  height: auto;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+
+.qr-verified-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  border: 1px solid #bbf7d0;
+
+  border-radius: 9px;
+
+  background: #f0fdf4;
+
+  color: #16a34a;
+}
+
+
+.qr-verified-status > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.qr-verified-status strong {
+  color: #166534;
+
+  font-size: 12px;
+}
+
+
+.qr-verified-status span {
+  color: #4d7c5a;
+
+  font-size: 10px;
+}
+
+
+.qr-verification-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.qr-verification-top .qr-user-id {
+    flex: 0 1 115px;
+    width: 115px;
+    min-width: 0;
+    max-width: 115px;
+
+    margin-top: 0;
+    padding: 12px 10px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.qr-verification-top .qr-user-id > div {
+    min-width: 0;
+    width: 100%;
+}
+
+.qr-verification-top .qr-user-id strong {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.qr-verification-top .qr-verification-heading {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.qr-verification-top .qr-verification-heading > div {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.qr-verification-top .qr-verification-heading span {
+    overflow-wrap: anywhere;
+}
+
+
+.qr-user-id > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 0;
+}
+
+
+.qr-user-id span {
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+
+.qr-user-id strong {
+  overflow: hidden;
+
+  color: #334155;
+
+  font-size: 12px;
+
+  text-overflow: ellipsis;
+}
+
+
+.qr-user-id button {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+
+.qr-user-id button:hover {
+  background: #f1f5f9;
+
+  color: #2563eb;
+}
+
+
+.qr-verification-url {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin-top: 12px;
+
+  padding: 12px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+
+.qr-verification-url span {
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+
+.qr-verification-url strong {
+  overflow-wrap: anywhere;
+
+  color: #2563eb;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+.qr-security-note {
+  margin: 13px 0 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.qr-open-verification {
+  width: 100%;
+
+  min-height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 15px;
+
+  border: 1px solid #2563eb;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.qr-open-verification:hover {
+  background: #1d4ed8;
+
+  border-color: #1d4ed8;
+}
+
+
+/* ============================================================
+   STATS
+============================================================ */
+
+.profile-stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 17px;
+
+  margin-bottom: 20px;
+}
+
+
+.profile-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 96px;
+
+  padding: 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.035);
+}
+
+
+.profile-stat-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+}
+
+
+.profile-stat-blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+
+.profile-stat-green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+
+.profile-stat-orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+
+.profile-stat-purple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+
+.profile-stat-card > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.profile-stat-card span {
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+
+.profile-stat-card strong {
+  color: #0f172a;
+
+  font-size: 21px;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   CONTENT GRID
+============================================================ */
+
+.profile-content-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    360px;
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+
+.profile-left-column,
+.profile-right-column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  min-width: 0;
+}
+
+
+/* ============================================================
+   COMMON PROFILE CARD
+============================================================ */
+
+.profile-card {
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.035);
+}
+
+
+/* ============================================================
+   CARD HEADER
+============================================================ */
+
+.profile-card-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 19px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+
+.profile-card-header > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.profile-card-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.profile-card-header p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+
+.profile-card-header > svg {
+  color: #2563eb;
+}
+
+
+/* ============================================================
+   ABOUT
+============================================================ */
+
+.profile-about-text {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   INFO GRID
+============================================================ */
+
+.profile-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  column-gap: 35px;
+
+  row-gap: 21px;
+}
+
+
+.profile-info-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.profile-info-item span {
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+
+.profile-info-item strong {
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   ACTIVE STATUS
+============================================================ */
+
+.active-status {
+  display: inline-flex !important;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #15803d !important;
+}
+
+
+.active-status span {
+  width: 7px;
+  height: 7px;
+
+  margin: 0 !important;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+
+/* ============================================================
+   SKILLS
+============================================================ */
+
+.profile-skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.profile-skill {
+  min-height: 28px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 0 10px;
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 6px;
+
+  background: #eff6ff;
+
+  color: #1d4ed8;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   ACCOUNT STATUS
+============================================================ */
+
+.account-status-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  margin-bottom: 14px;
+
+  border: 1px solid #bbf7d0;
+
+  border-radius: 9px;
+
+  background: #f0fdf4;
+}
+
+
+.account-status-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+}
+
+
+.account-status-box > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.account-status-box strong {
+  color: #166534;
+
+  font-size: 12px;
+}
+
+
+.account-status-box span {
+  color: #4d7c5a;
+
+  font-size: 10px;
+}
+
+
+.account-security-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #eef2f7;
+
+  color: #64748b;
+}
+
+
+.account-security-item > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  flex: 1;
+}
+
+
+.account-security-item strong {
+  color: #334155;
+
+  font-size: 11px;
+}
+
+
+.account-security-item span {
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+
+.security-check {
+  color: #16a34a;
+}
+
+
+/* ============================================================
+   PROJECTS
+============================================================ */
+
+.profile-project-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.profile-project-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+
+.profile-project-item:first-child {
+  padding-top: 0;
+}
+
+
+.profile-project-item:last-child {
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+
+.project-profile-icon {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.profile-project-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.profile-project-info strong {
+  color: #334155;
+
+  font-size: 12px;
+}
+
+
+.profile-project-info span {
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+
+.profile-project-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 4px;
+}
+
+
+.project-active-badge {
+  padding: 3px 7px;
+
+  border-radius: 5px;
+
+  background: #dcfce7;
+
+  color: #15803d;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+.profile-project-meta small {
+  color: #94a3b8;
+
+  font-size: 9px;
+}
+
+
+/* ============================================================
+   ACHIEVEMENT
+============================================================ */
+
+.profile-achievement-card {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 18px;
+
+  border: 1px solid #ddd6fe;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #faf5ff,
+      #f5f3ff
+    );
+}
+
+
+.achievement-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #ede9fe;
+
+  color: #7c3aed;
+}
+
+
+.profile-achievement-card > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.profile-achievement-card span {
+  color: #7c3aed;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.profile-achievement-card strong {
+  color: #4c1d95;
+
+  font-size: 12px;
+}
+
+
+.profile-achievement-card p {
+  margin: 0;
+
+  color: #7c6f99;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   EDIT MODAL
+============================================================ */
+
+.profile-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.52);
+
+  backdrop-filter: blur(3px);
+}
+
+
+.profile-edit-modal {
+  width: 100%;
+
+  max-width: 560px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.22);
+}
+
+
+.profile-modal-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+.profile-modal-header h2 {
+  margin: 0 0 4px;
+
+  color: #0f172a;
+
+  font-size: 17px;
+}
+
+
+.profile-modal-header p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+
+.profile-modal-close {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+
+.profile-modal-close:hover {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+.profile-edit-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+
+  padding: 22px;
+}
+
+
+.profile-edit-two-column {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 14px;
+}
+
+
+.profile-edit-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.profile-edit-field label {
+  color: #475569;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+.profile-edit-field input,
+.profile-edit-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px 11px;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 12px;
+}
+
+
+.profile-edit-field input {
+  height: 39px;
+}
+
+
+.profile-edit-field textarea {
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+
+.profile-edit-field input:focus,
+.profile-edit-field textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.09);
+}
+
+
+.profile-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  padding: 15px 22px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+
+.profile-modal-cancel,
+.profile-modal-save {
+  min-height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.profile-modal-cancel {
+  border: 1px solid #cbd5e1;
+
+  background: #ffffff;
+
+  color: #475569;
+}
+
+
+.profile-modal-cancel:hover {
+  background: #f8fafc;
+}
+
+
+.profile-modal-save {
+  border: 1px solid #2563eb;
+
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+
+.profile-modal-save:hover {
+  background: #1d4ed8;
+}
+
+
+/* ============================================================
+   RESPONSIVE - 1100px
+============================================================ */
+
+@media (max-width: 1100px) {
+
+  .profile-page {
+    padding: 24px 22px 40px;
+  }
+
+
+  .profile-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .profile-right-column {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE - 850px
+============================================================ */
+
+@media (max-width: 850px) {
+
+  .profile-stats-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .profile-right-column {
+    grid-template-columns: 1fr;
+  }
+
+
+  .linkedin-profile-details {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .linkedin-detail-item:nth-child(2) {
+    border-right: none;
+  }
+
+
+  .linkedin-detail-item:nth-child(-n + 2) {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE - 650px
+============================================================ */
+
+@media (max-width: 650px) {
+
+  .profile-page {
+    padding: 18px 14px 30px;
+  }
+
+
+  .linkedin-cover {
+    height: 155px;
+  }
+
+
+  .linkedin-cover-overlay {
+    left: 24px;
+  }
+
+
+  .linkedin-cover-title {
+    font-size: 22px;
+  }
+
+
+  .linkedin-cover-subtitle {
+    font-size: 12px;
+  }
+
+
+  .linkedin-profile-body {
+    display: block;
+
+    min-height: 270px;
+
+    padding:
+      0
+      18px
+      20px;
+  }
+
+
+  /* ==========================================================
+     MOBILE PHOTO
+  ========================================================== */
+
+  .linkedin-photo-wrapper {
+    position: relative;
+
+    width: 116px;
+    height: 116px;
+
+    margin-top: -58px;
+
+    margin-left: 0;
+
+    margin-bottom: 0;
+
+    z-index: 100;
+  }
+
+
+  .linkedin-profile-photo {
+    width: 116px;
+
+    height: 116px;
+  }
+
+
+  .linkedin-profile-main {
+    width: 100%;
+
+    padding-top: 15px;
+
+    padding-left: 0;
+  }
+
+
+  .linkedin-profile-name-row h1 {
+    font-size: 23px;
+  }
+
+
+  .linkedin-profile-meta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+
+  .linkedin-profile-actions {
+    width: 100%;
+
+    padding-top: 15px;
+  }
+
+
+  .linkedin-edit-profile-btn {
+    width: 100%;
+  }
+
+
+  .linkedin-profile-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .linkedin-detail-item {
+    border-right: none;
+
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+
+  .linkedin-detail-item:last-child {
+    border-bottom: none;
+  }
+
+
+  .linkedin-qr-section {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 16px;
+  }
+
+
+  .linkedin-qr-action {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  .profile-info-grid {
+    grid-template-columns: 1fr;
+
+    row-gap: 17px;
+  }
+
+
+  .profile-edit-two-column {
+    grid-template-columns: 1fr;
+  }
+
+
+  .profile-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE - 450px
+============================================================ */
+
+@media (max-width: 450px) {
+
+  .profile-page {
+    padding:
+      15px
+      10px
+      25px;
+  }
+
+
+  .linkedin-cover {
+    height: 130px;
+  }
+
+
+  .linkedin-cover-overlay {
+    left: 18px;
+  }
+
+
+  .linkedin-cover-title {
+    font-size: 19px;
+  }
+
+
+  .linkedin-cover-subtitle {
+    font-size: 10px;
+  }
+
+
+  .linkedin-cover-edit {
+    top: 13px;
+
+    right: 13px;
+
+    width: 34px;
+
+    height: 34px;
+  }
+
+
+  .linkedin-profile-body {
+    min-height: 255px;
+
+    padding-left: 14px;
+
+    padding-right: 14px;
+  }
+
+
+  .linkedin-photo-wrapper {
+    width: 96px;
+
+    height: 96px;
+
+    margin-top: -48px;
+  }
+
+
+  .linkedin-profile-photo {
+    width: 96px;
+
+    height: 96px;
+
+    border-width: 5px;
+  }
+
+
+  .linkedin-profile-photo span {
+    font-size: 28px;
+  }
+
+
+  .linkedin-photo-camera {
+    width: 31px;
+
+    height: 31px;
+  }
+
+
+  .linkedin-profile-main {
+    padding-top: 12px;
+  }
+
+
+  .linkedin-profile-name-row h1 {
+    font-size: 21px;
+  }
+
+
+  .linkedin-designation {
+    font-size: 13px;
+  }
+
+
+  .linkedin-qr-action {
+    gap: 8px;
+  }
+
+
+  .linkedin-qr-box {
+    width: 78px;
+
+    height: 78px;
+  }
+
+
+  .linkedin-view-qr-button {
+    padding: 0 10px;
+  }
+
+
+  .profile-card {
+    padding: 16px;
+  }
+
+
+  .profile-modal-overlay {
+    padding: 10px;
+  }
+
+
+  .profile-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+
+  .profile-modal-cancel,
+  .profile-modal-save {
+    width: 100%;
+  }
+
+
+  .profile-project-meta {
+    display: none;
+  }
+
+}
+
+/* ============================================================
+   QR PROFESSIONAL IDENTITY MODAL - MISSING STYLES
+============================================================ */
+
+.qr-modal-title-area {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.qr-modal-title-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.qr-professional-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.qr-professional-avatar {
+    position: relative;
+
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    box-shadow:
+        0 3px 10px rgba(15, 23, 42, 0.16);
+}
+
+.qr-professional-avatar span {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.qr-avatar-verified {
+    position: absolute;
+
+    right: -2px;
+    bottom: -2px;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.qr-professional-name {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.qr-name-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qr-name-row h3 {
+    margin: 0;
+
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.qr-name-verified {
+    color: #2563eb;
+}
+
+.qr-professional-name p {
+    margin: 0;
+
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.qr-professional-name > span {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   PROFESSIONAL INFORMATION
+============================================================ */
+
+.qr-professional-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+
+    background: #e2e8f0;
+}
+
+.qr-professional-info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+    min-width: 0;
+
+    padding: 11px;
+
+    background: #ffffff;
+}
+
+.qr-info-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #f8fafc;
+    color: #64748b;
+}
+
+.qr-professional-info-item > div:last-child {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.qr-professional-info-item span {
+    color: #94a3b8;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.qr-professional-info-item strong {
+    overflow: hidden;
+
+    color: #334155;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   EMPLOYEE STATUS
+============================================================ */
+
+.qr-professional-status {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 13px;
+    padding: 11px;
+
+    border: 1px solid #bbf7d0;
+    border-radius: 9px;
+
+    background: #f0fdf4;
+}
+
+.qr-status-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.qr-professional-status > div:nth-child(2) {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    flex: 1;
+}
+
+.qr-professional-status strong {
+    color: #166534;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.qr-professional-status > div:nth-child(2) span {
+    color: #4d7c5a;
+
+    font-size: 9px;
+}
+
+.qr-status-badge {
+    padding: 4px 7px;
+
+    border-radius: 5px;
+
+    background: #dcfce7;
+    color: #15803d;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   QR VERIFICATION AREA
+============================================================ */
+
+.qr-verification-card {
+    display: grid;
+
+    grid-template-columns:
+        210px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 15px;
+    padding: 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    background: #f8fafc;
+}
+
+.qr-verification-card .qr-large-container {
+    padding: 0;
+}
+
+.qr-verification-card .qr-large-container svg {
+    width: 190px;
+    padding: 6px;
+}
+
+.qr-verification-information {
+    min-width: 0;
+}
+
+
+.qr-verification-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #2563eb;
+}
+
+.qr-verification-heading > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.qr-verification-heading strong {
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.qr-verification-heading span {
+    color: #94a3b8;
+
+    font-size: 9px;
+}
+
+
+/* ============================================================
+   SECURITY NOTE
+============================================================ */
+
+.qr-security-note-box {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-top: 13px;
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.qr-security-note-box svg {
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    color: #64748b;
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .qr-professional-info {
+        grid-template-columns: 1fr;
+    }
+
+    .qr-verification-card {
+        grid-template-columns: 1fr;
+    }
+
+    .qr-verification-card .qr-large-container {
+        justify-content: center;
+    }
+
+    .qr-professional-status {
+        align-items: flex-start;
+    }
+
+    .qr-status-badge {
+        margin-left: auto;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .qr-modal {
+        padding: 16px;
+    }
+
+    .qr-professional-avatar {
+        width: 55px;
+        height: 55px;
+    }
+
+    .qr-professional-name h3 {
+        font-size: 14px;
+    }
+
+    .qr-verification-card {
+        padding: 10px;
+    }
+}
