@@ -19,7 +19,7 @@ import "./styles/tickets.css";
 import "./styles/create-ticket.css";
 import "./styles/profile.css";
 import "./styles/UserSettings.css";
-
+import "./styles/ticket-details.css";
 
 function App() {
 
